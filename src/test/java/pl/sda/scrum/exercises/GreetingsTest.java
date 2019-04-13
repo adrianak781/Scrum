@@ -68,7 +68,7 @@ public class GreetingsTest {
         //when
         String result = greetings.greet(name);
         //then
-        assertEquals("Adam, Iza, witajcie! WITAJ ROBERT!", result);
+        assertEquals("Adam i Iza, witajcie! WITAJ ROBERT!", result);
     }
 
     @Test

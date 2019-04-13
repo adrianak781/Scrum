@@ -30,7 +30,7 @@ public class Greetings {
                 result = nonUpperCaseNames.get(0);
                 for (int i = 1; i < nonUpperCaseNames.size(); i++) {
                     if(i == nonUpperCaseNames.size()-1){
-                        result= result + " i " + nonUpperCaseNames.get(i);
+                        result = result + " i " + nonUpperCaseNames.get(i);
                         break;
                     }
                     result = result + ", " + nonUpperCaseNames.get(i);
@@ -40,9 +40,9 @@ public class Greetings {
                     return result;
                 }else {
                     if (upperCaseNames.size() == 1){
-                        result += result + " WITAJ " + upperCaseNames.get(0) + "!";
+                        result = result + " WITAJ " + upperCaseNames.get(0) + "!";
                     }else {
-                        result += " " + upperCaseNames.get(0);
+                        result = result + " " + upperCaseNames.get(0);
                         for (int i = 1; i < upperCaseNames.size(); i++) {
                             if (i == upperCaseNames.size() - 1) {
                                 result = result + " I " + upperCaseNames.get(i);
@@ -54,11 +54,12 @@ public class Greetings {
                     }
                 }
 
-            }
-            if (name == name.toUpperCase()){
-                result = "WITAJ, " + name + "!";
             }else {
-                result = "Witaj, " + name + "!";
+                if (name == name.toUpperCase()) {
+                    result = "WITAJ, " + name + "!";
+                } else {
+                    result = "Witaj, " + name + "!";
+                }
             }
 
         } else {
