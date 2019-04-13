@@ -9,6 +9,13 @@ public class Greetings {
         String result = "";
 
         if (name != null) {
+            String number = "0123456789";
+            String[] numbers = number.split("");
+            for (String num : numbers) {
+                if(name.contains(num)){
+                    return result = "Z liczbami się nie witam.";
+                }
+            }
             if(name.contains(",")){
                 String[] names = name.split(",");
                 List<String> nonUpperCaseNames = new ArrayList<>();

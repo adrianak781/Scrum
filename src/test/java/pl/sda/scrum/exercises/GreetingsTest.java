@@ -59,4 +59,27 @@ public class GreetingsTest {
         //then
         assertEquals("Adam, Iza i Robert, witajcie!", result);
     }
+
+    @Test
+    public void shouldReturnGreetingIfThreeNamesWasGivenWithUpperCaseName() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza,ROBERT";
+        //when
+        String result = greetings.greet(name);
+        //then
+        assertEquals("Adam, Iza, witajcie! WITAJ ROBERT!", result);
+    }
+
+    @Test
+    public void shouldReturnNoGreetingsIfNameContainsNumbers() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "1245";
+        //when
+        String result = greetings.greet(name);
+        //then
+        assertEquals("Z liczbami się nie witam.", result);
+    }
+
 }
