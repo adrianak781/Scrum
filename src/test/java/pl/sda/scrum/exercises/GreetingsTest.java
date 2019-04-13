@@ -27,4 +27,14 @@ public class GreetingsTest {
         //then
         assertEquals("Witaj, mój przyjacielu", result);
     }
+    @Test
+    public void shouldReturnUpperCaseGreetingForUpperCaseName() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "ADAM";
+        //when
+        String result = greetings.greet(name);
+        //then
+        assertEquals("WITAJ, ADAM!", result);
+    }
 }
