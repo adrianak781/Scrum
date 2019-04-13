@@ -10,10 +10,11 @@ public class Greetings {
                 String[] names = name.split(",");
                 result = names[0];
                 for (int i = 1; i < names.length; i++) {
-                    result = result + "," + names[i];
                     if(i == names.length-1){
                         result= result + " i " + names[i];
+                        break;
                     }
+                    result = result + "," + names[i];
                 }
                 return result + ", witajcie!";
 
