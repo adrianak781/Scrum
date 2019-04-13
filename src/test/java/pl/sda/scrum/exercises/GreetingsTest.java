@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class GreetingsTest {
 
     @Test
-    public void greet() {
+    public void shouldReturnGreetingForSingleName() {
         //given
         Greetings greetings = new Greetings();
         String name = "Adam";
@@ -15,5 +15,16 @@ public class GreetingsTest {
         String result = greetings.greet(name);
         //then
         assertEquals("Witaj, Adam!", result);
+    }
+
+    @Test
+    public void shouldReturnDefaultGreetingForNull() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = null;
+        //when
+        String result = greetings.greet(name);
+        //then
+        assertEquals("Witaj, mój przyjacielu", result);
     }
 }
