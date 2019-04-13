@@ -3,10 +3,18 @@ package pl.sda.scrum.exercises;
 public class Greetings {
 
     public String greet(String name) {
+        String result;
+
         if (name != null) {
-            return "Witaj, " + name + "!";
+            if (name == name.toUpperCase()){
+                result = "WITAJ, " + name + "!";
+            }else {
+                result = "Witaj, " + name + "!";
+            }
         } else {
-            return "Witaj, mój przyjacielu";
+            result = "Witaj, mój przyjacielu";
         }
+
+        return result;
     }
 }
