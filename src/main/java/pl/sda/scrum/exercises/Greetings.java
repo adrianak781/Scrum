@@ -43,7 +43,7 @@ public class Greetings {
                             }
                             result = result + ", " + upperCaseNames.get(i);
                         }
-                        result += ", WITAJCIE!";
+                        return result + ", WITAJCIE!";
                     }
                 }
 
