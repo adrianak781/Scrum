@@ -39,7 +39,7 @@ public class GreetingsTest {
     }
 
     @Test
-    public void shouldReturnGreetingIfTwoNameWasGiven() {
+    public void shouldReturnGreetingIfTwoNamesWasGiven() {
         //given
         Greetings greetings = new Greetings();
         String name = "Adam,Iza";
@@ -47,5 +47,16 @@ public class GreetingsTest {
         String result = greetings.greet(name);
         //then
         assertEquals("Adam i Iza, witajcie!", result);
+    }
+
+    @Test
+    public void shouldReturnGreetingIfThreeNamesWasGiven() {
+        //given
+        Greetings greetings = new Greetings();
+        String name = "Adam,Iza,Robert";
+        //when
+        String result = greetings.greet(name);
+        //then
+        assertEquals("Adam, Iza i Robert, witajcie!", result);
     }
 }

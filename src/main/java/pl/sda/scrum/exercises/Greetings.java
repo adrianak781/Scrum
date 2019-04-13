@@ -14,7 +14,7 @@ public class Greetings {
                         result= result + " i " + names[i];
                         break;
                     }
-                    result = result + "," + names[i];
+                    result = result + ", " + names[i];
                 }
                 return result + ", witajcie!";
 
