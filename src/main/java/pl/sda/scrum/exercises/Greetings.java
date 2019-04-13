@@ -4,6 +4,6 @@ public class Greetings {
 
     public String greet(String name){
 
-        return null;
+        return "Witaj, " + name + "!";
     }
 }

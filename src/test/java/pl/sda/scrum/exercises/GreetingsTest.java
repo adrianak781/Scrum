@@ -10,7 +10,7 @@ public class GreetingsTest {
     public void greet() {
         //given
         Greetings greetings = new Greetings();
-        String name = "Adam;";
+        String name = "Adam";
         //when
         String result = greetings.greet(name);
         //then
