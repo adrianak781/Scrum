@@ -34,7 +34,7 @@ public class StringCalculatorTest {
     @Test
     public void shouldReturnSumForMoreThen2DigitsWhithOwnSeparatorDefinition(){
         StringCalculator stringCalculator = new StringCalculator();
-        int sum = stringCalculator.add("//;3\n3;5;7");
+        int sum = stringCalculator.add("//;\n3;5;7");
 
         assertEquals(15,sum);
     }
