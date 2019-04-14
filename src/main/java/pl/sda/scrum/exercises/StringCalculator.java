@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StringCalculator {
     public int add(String numbers){
-        if (numbers.equals(null) || numbers.length() == 0){
+        if (numbers == null || numbers.length() == 0){
             return 0;
         }else {
             String[] numbersTable = numbers.split(",");
