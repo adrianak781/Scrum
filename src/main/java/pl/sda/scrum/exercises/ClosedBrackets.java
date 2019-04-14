@@ -1,12 +1,12 @@
 package pl.sda.scrum.exercises;
 
-import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ClosedBrackets {
 
-    public static boolean gueueBreckets(String string) {
+
+    public boolean gueueBreckets(String string) {
         Queue<String> queue = new LinkedBlockingQueue<>();
 
         String[] characters = string.split("");
@@ -15,14 +15,10 @@ public class ClosedBrackets {
         } else {
             for (int i = 0; i < characters.length; i++) {
                 if(characters[i].equals("[")) {
-                    queue.add(characters[i]);
+                    AddToQueue(queue, characters[i]);
                 }else {
                     if (!queue.isEmpty()) {
-                        if (queue.peek().contains("[")) {
-                            queue.poll();
-                        } else {
-                            queue.add(characters[i]);
-                        }
+                        RemoveBracketPairOrElseAddToQueue(queue, characters, i);
                     }
                 }
             }
@@ -30,4 +26,22 @@ public class ClosedBrackets {
         if (queue.isEmpty())return true;
         else return false;
     }
+
+    private void AddToQueue(Queue<String> queue, String character) {
+        insertToQueue(queue, character);
+    }
+
+    private void RemoveBracketPairOrElseAddToQueue(Queue<String> queue, String[] characters, int i) {
+        if (queue.peek().contains("[")) {
+            queue.poll();
+        } else {
+            insertToQueue(queue, characters[i]);
+        }
+    }
+
+    private void insertToQueue(Queue<String> queue, String character) {
+        queue.add(character);
+    }
+
+
 }

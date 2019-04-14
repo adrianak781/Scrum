@@ -8,22 +8,24 @@ public class ClosedBracketsTest {
 
     @Test
     public void shouldAllQueueBrecketsBeClosed() {
-        boolean firstCheck = ClosedBrackets.gueueBreckets("[]");
+        ClosedBrackets closedBrackets = new ClosedBrackets();
+
+        boolean firstCheck = closedBrackets.gueueBreckets("[]");
         assertTrue(firstCheck);
 
-        boolean secondCheck = ClosedBrackets.gueueBreckets("[][]");
+        boolean secondCheck = closedBrackets.gueueBreckets("[][]");
         assertTrue(secondCheck);
 
-        boolean thirdCheck = ClosedBrackets.gueueBreckets("[[][]]");
+        boolean thirdCheck = closedBrackets.gueueBreckets("[[][]]");
         assertTrue(thirdCheck);
 
-        boolean forthCheck = ClosedBrackets.gueueBreckets("][");
+        boolean forthCheck = closedBrackets.gueueBreckets("][");
         assertFalse(forthCheck);
 
-        boolean fifthCheck = ClosedBrackets.gueueBreckets("][][");
+        boolean fifthCheck = closedBrackets.gueueBreckets("][][");
         assertFalse(fifthCheck);
 
-        boolean sixthCheck = ClosedBrackets.gueueBreckets("[]][[]");
+        boolean sixthCheck = closedBrackets.gueueBreckets("[]][[]");
         assertFalse(sixthCheck);
     }
 }
