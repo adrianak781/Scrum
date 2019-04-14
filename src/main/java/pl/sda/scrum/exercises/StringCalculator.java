@@ -8,6 +8,7 @@ public class StringCalculator {
         if (numbers == null || numbers.length() == 0){
             return 0;
         }else {
+            numbers = numbers.replaceAll("\n", ",");
             String[] numbersTable = numbers.split(",");
             List<Integer> numbersList = new ArrayList<>();
             for (int i = 0; i < numbersTable.length; i++) {
