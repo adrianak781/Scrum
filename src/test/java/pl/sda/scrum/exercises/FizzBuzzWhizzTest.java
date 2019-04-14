@@ -15,17 +15,33 @@ public class FizzBuzzWhizzTest {
 
     @Test
     public void shouldReturnFizzStringIfDigitIsDividableBy3() {
-        Integer value = 3;
+        Integer value = 9;
         assertEquals("Fizz", fizzBuzzWhizz.fizzBuzzWhizz(value));
     }
     @Test
     public void shouldReturnBuzzStringIfDigitIsDividableBy5() {
-        Integer value = 5;
+        Integer value = 20;
         assertEquals("Buzz", fizzBuzzWhizz.fizzBuzzWhizz(value));
     }
     @Test
-    public void shouldReturnFizzBuzzStringIfDigitIsPrimeNumber() {
-        Integer value = 13;
+    public void shouldReturnFizzBuzzStringIfDigitIsDividableBy3And5() {
+        Integer value = 15;
         assertEquals("FizzBuzz", fizzBuzzWhizz.fizzBuzzWhizz(value));
     }
+    @Test
+    public void shouldReturnWhizzStringIfDigitIsPrimeNumber() {
+        Integer value = 13;
+        assertEquals("Whizz", fizzBuzzWhizz.fizzBuzzWhizz(value));
+    }
+    @Test
+    public void shouldReturnFizzWhizzStringIfDigitIs3() {
+        Integer value = 3;
+        assertEquals("FizzWhizz", fizzBuzzWhizz.fizzBuzzWhizz(value));
+    }
+    @Test
+    public void shouldReturnBuzzWhizzStringIfDigitIs5() {
+        Integer value = 5;
+        assertEquals("BuzzWhizz", fizzBuzzWhizz.fizzBuzzWhizz(value));
+    }
+
 }
