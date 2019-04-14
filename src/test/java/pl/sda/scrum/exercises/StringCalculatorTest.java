@@ -20,4 +20,11 @@ public class StringCalculatorTest {
 
         assertEquals(10,sum);
     }
+    @Test
+    public void shouldReturnSumForMoreThen2DigitsWhithNewLineMark(){
+        StringCalculator stringCalculator = new StringCalculator();
+        int sum = stringCalculator.add("3\n5,3");
+
+        assertEquals(11,sum);
+    }
 }
