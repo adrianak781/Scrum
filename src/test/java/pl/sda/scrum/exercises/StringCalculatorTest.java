@@ -69,4 +69,11 @@ public class StringCalculatorTest {
 
         assertEquals(14,sum);
     }
+    @Test
+    public void shouldAcceptMultipleSeparatorsAndMulticharacerSeparators(){
+        StringCalculator stringCalculator = new StringCalculator();
+        int sum = stringCalculator.add("//[**][%]\n5**3%7");
+
+        assertEquals(15,sum);
+    }
 }
