@@ -5,9 +5,10 @@ import java.util.List;
 
 public class StringCalculator {
     public int add(String numbers){
-        if (numbers.equals(null) || numbers.length() == 0){
+        if (numbers == null || numbers.length() == 0){
             return 0;
         }else {
+            numbers = numbers.replaceAll("\n", ",");
             String[] numbersTable = numbers.split(",");
             List<Integer> numbersList = new ArrayList<>();
             for (int i = 0; i < numbersTable.length; i++) {
