@@ -23,4 +23,9 @@ public class FizzBuzzWhizzTest {
         Integer value = 5;
         assertEquals("Buzz", fizzBuzzWhizz.fizzBuzzWhizz(value));
     }
+    @Test
+    public void shouldReturnFizzBuzzStringIfDigitIsPrimeNumber() {
+        Integer value = 13;
+        assertEquals("FizzBuzz", fizzBuzzWhizz.fizzBuzzWhizz(value));
+    }
 }
