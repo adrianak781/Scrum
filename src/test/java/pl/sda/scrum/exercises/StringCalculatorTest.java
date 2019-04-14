@@ -13,5 +13,11 @@ public class StringCalculatorTest {
 
         assertEquals(8,sum);
     }
+    @Test
+    public void shouldReturnSumForMoreThen2Digits(){
+        StringCalculator stringCalculator = new StringCalculator();
+        int sum = stringCalculator.add("2,3,5");
 
+        assertEquals(10,sum);
+    }
 }
