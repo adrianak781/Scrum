@@ -13,7 +13,7 @@ public class StringCalculator {
             for (int i = 0; i < numbersTable.length; i++) {
                 numbersList.add(Integer.valueOf(numbersTable[i]));
             }
-
+            return numbersList.stream().mapToInt(Integer::intValue).sum();
         }
     }
 }
